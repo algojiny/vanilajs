@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "webpack --watch",
-    "server": "webpack serve --open"
+    "start": "webpack --mode=development",
+    "server": "webpack serve --open --mode=development"
   },
   "devDependencies": {
     "@babel/core": "^7.17.8",
@@ -14,7 +14,6 @@
     "css-loader": "^6.7.1",
     "html-webpack-plugin": "^5.5.0",
     "mini-css-extract-plugin": "^2.6.0",
-    "nodemon": "^2.0.15",
     "sass": "^1.49.10",
     "sass-loader": "^12.6.0",
     "style-loader": "^3.3.1",

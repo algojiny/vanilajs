@@ -2,16 +2,16 @@ const path = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
-let htmlPageNames = ["event", "shop"];
+let htmlPageNames = ["event", "shop"]; // 새로운 페이지 생성할때 이름 붙혀넣기
+
 let multipleHtmlPlugins = htmlPageNames.map((name) => {
   return new HtmlWebpackPlugin({
-    template: `src/views/${name}.html`, // relative path to the HTML files
-    filename: `views/${name}.html`, // output HTML files
+    template: `src/views/${name}.html`,
+    filename: `views/${name}.html`,
   });
 });
 
 module.exports = {
-  mode: "development",
   watch: true,
   plugins: [
     new MiniCssExtractPlugin({
@@ -22,6 +22,7 @@ module.exports = {
       filename: "index.html",
     }),
   ].concat(multipleHtmlPlugins),
+
   entry: "./src/js/index.js",
   output: {
     filename: "js/main.js",
