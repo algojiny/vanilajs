@@ -26,5 +26,6 @@
   },
   "dependencies": {
     "gh-pages": "^3.2.3"
-  }
+  },
+  "homepage": "https://zzoocoder.github.io/vanilajs/"
 }
