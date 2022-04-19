@@ -1,4 +1,5 @@
-@import "./_variables";
+@import "./config/_variables";
+@import "./config/_mixin";
 body {
-  background-color: blue;
+  background-color: #d9d9d9;
 }

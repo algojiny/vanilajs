@@ -1,3 +1,2 @@
 import "../scss/styles.scss";
-
-alert("hello");
+import "./screen/home";
