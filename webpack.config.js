@@ -3,7 +3,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
-let htmlPageNames = ["event", "shop"]; // 새로운 페이지 생성할때 이름 붙혀넣기
+let htmlPageNames = ["home", "join"]; // 새로운 페이지 생성할때 이름 붙혀넣기
 
 let multipleHtmlPlugins = htmlPageNames.map((name) => {
   return new HtmlWebpackPlugin({
