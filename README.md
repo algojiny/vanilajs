@@ -17,5 +17,9 @@ npm run server: 라이브서버 기능 + 서버역할
 4. javascript와 scss 파일은 1개의 파일만 번들링됨 <- 이부분은 추가 설명필요하니 문의
 5. scss 는 css전처리기라 불림. scss는 css로 변환된후 적용됨 // 이 변환기능이 npm run start(웹팩 번들링)
 6. scss 활용법은 문의 또는 개발물 참고
-
 [scss] (https://sass-lang.com/documentation/at-rules/mixin)
+
+## 개발 목표
+* [x] 체크박스
+* [ ] 빈 체크박스
+* [ ] 빈 체크박스
