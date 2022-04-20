@@ -20,6 +20,8 @@ npm run server: 라이브서버 기능 + 서버역할
 [scss] (https://sass-lang.com/documentation/at-rules/mixin)
 
 ## 개발 목표
-* [x] 체크박스
-* [ ] 빈 체크박스
-* [ ] 빈 체크박스
+* [x] 깃/깃허브를 활용한 협업
+* [x] 컴포넌트를 구성해 개발
+* [x] 바닐라js를 사용해 자바스트립트 숙련도 향상
+* [x] Scss 학습
+* [x] 반응형 홈페이지 제작
