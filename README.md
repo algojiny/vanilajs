@@ -6,6 +6,7 @@
 3. npm install 로 필수모듈 다운로드
 4. 2개의 터미널에 각각 npm run start // npm run server 입력
 <br>
-npm run start: 작업파일 번들링
+npm run start: 작업파일 번들링 
+<br>
 npm run server: 라이브서버와 비슷한 기능
 
