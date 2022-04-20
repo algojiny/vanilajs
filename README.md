@@ -44,4 +44,7 @@ npm run server: 라이브서버 기능 + 서버역할
   * 스크롤 이벤트 구현
 ---
 **이진영**
-1. html
+1. HTML
+ * 장바구니페이지 개발 src/basket.html
+ * 결제페이지 개발 src/pay.html
+ * 갤러리페이지 개발 src/gallery.html
