@@ -10,6 +10,7 @@ npm run start: 작업파일 번들링 (웹팩 번들링)
 <br>
 npm run server: 라이브서버 기능 + 서버역할
 
+
 ## 구조
 1. src폴더에서만 작업하면됨.. npm run start(웹팩 번들링)이 puplic 폴더에 배포가능한 코드로 번들링해줌 *puplic 폴더는 직접 안건드림
 2. 기본이 src/index.html이고 새로운 페이지 만들때는 src/views 폴더내에 html 파일생성 // 추가로 webpack.config.js 파일에 html이름만 추가 *파일열어보면 친절히 써있음
@@ -19,12 +20,16 @@ npm run server: 라이브서버 기능 + 서버역할
 6. scss 활용법은 문의 또는 개발물 참고
 [scss] (https://sass-lang.com/documentation/at-rules/mixin)
 
+
+
 ## 개발 목표
 * [x] 깃/깃허브를 활용한 협업
 * [x] 컴포넌트를 구성해 개발
 * [x] 바닐라js를 사용해 자바스트립트 숙련도 향상
 * [x] Scss 학습
 * [x] 반응형 홈페이지 제작
+
+
 
 ## 역할 분담
 **주영석**
