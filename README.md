@@ -48,3 +48,7 @@ npm run server: 라이브서버 기능 + 서버역할
  * 장바구니페이지 개발 src/basket.html
  * 이벤트페이지 개발 src/event.html
  * 갤러리페이지 개발 src/gallery.html
+---
+## 주의사항
+ * webpack 파일에 html이름 넣은다음에 터미널 다시 시작해야 할수도있음(잘모름)
+ * scss/screen 폴더에서 각 페이지 css작업후 style.scss 에 @import 하는것 필수 // js도 똑같은 논리
