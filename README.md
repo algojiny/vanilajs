@@ -44,4 +44,14 @@ npm run server: 라이브서버 기능 + 서버역할
   * 스크롤 이벤트 구현
 ---
 **이진영**
-1. html
+1. HTML
+ * 장바구니페이지 개발 src/basket.html
+ * 이벤트페이지 개발 src/event.html
+ * 갤러리페이지 개발 src/gallery.html
+---
+## 흔한 에러 및 대처법
+ * webpack 파일에 html이름 넣은다음에 터미널 다시 시작해야 할수도있음(잘모름)
+ * scss/screen 폴더에서 각 페이지 css작업후 style.scss 에 @import 하는것 필수 // js도 똑같은 논리
+ * scss 작업시 mixin 과 variable 파일 import해줘야 mixin 이랑 variable 사용가능
+ * 계속해서 원인을 알수없는 에러가 생기면 첫째로 npm을 처음부터 다시 실행해보고 그래도 안되면 전버전으로 백업<br>
+   (중요한 작업끝나면 항상 커밋해주는게 좋음)
