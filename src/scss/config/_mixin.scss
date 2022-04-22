@@ -1,0 +1,16 @@
+@mixin flex_row($just, $align) {
+  display: flex;
+  justify-content: $just;
+  align-items: $align;
+}
+@mixin flex_column($just, $align) {
+  display: flex;
+  flex-direction: column;
+  justify-content: $just;
+  align-items: $just;
+}
+@mixin max($size) {
+  @media screen and (max-width: $size) {
+    @content;
+  }
+}
