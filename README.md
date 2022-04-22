@@ -54,4 +54,4 @@ npm run server: 라이브서버 기능 + 서버역할
  * scss/screen 폴더에서 각 페이지 css작업후 style.scss 에 @import 하는것 필수 // js도 똑같은 논리
  * scss 작업시 mixin 과 variable 파일 import해줘야 mixin 이랑 variable 사용가능
  * 계속해서 원인을 알수없는 에러가 생기면 첫째로 npm을 처음부터 다시 실행해보고 그래도 안되면 전버전으로 백업<br>
-   (중요한 작업끝나면 항시 커밋해주는게 좋음)
+   (중요한 작업끝나면 항상 커밋해주는게 좋음)
