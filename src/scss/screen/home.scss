@@ -1,2 +1,10 @@
-@import "../config/_mixin";
-@import "../config/_variables";
+@import "../config/mixin";
+@import "../config/variables";
+
+.home {
+  .banner {
+    width: 100%;
+    height: 100vh;
+    background-color: $point-color;
+  }
+}
