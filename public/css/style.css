@@ -1,2 +1,298 @@
+/*!***************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/scss/styles.scss ***!
+  \***************************************************************************************************************/
 @import url(https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap);
-html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:"";content:none}table{border-collapse:collapse;border-spacing:0}a{text-decoration:none;color:inherit}header{display:flex;justify-content:space-between;align-items:center;position:fixed;background-color:rgba(0,0,0,0);width:1440px;height:100px;margin:0 auto}@media screen and (max-width: 1440px){header{width:100%}}header .logo{font-size:24px;font-weight:bold;color:#fff;z-index:2}header nav{z-index:2}header nav a{display:inline-block;height:100%;width:100px;font-size:18px;font-weight:600;color:#fff}header .myPage{z-index:2}header .myPage a{margin:0 10px;font-size:22px;z-index:2}header .myPage a i{color:#fff}header .header_bg{position:absolute;background-color:#333;z-index:1;width:100%;height:100%;transform:translateY(-100%);transition:all ease-in-out .5s}.home .banner{width:100%;height:100vh;background-color:tomato}#promotion{display:flex;flex-direction:column;justify-content:center;align-items:center;width:100%;height:100vh}#promotion h1{font-size:48px;font-weight:bold}#promotion .links{display:flex;justify-content:center;align-items:center;margin:50px 0px}#promotion .links a{font-size:34px;font-weight:bold;margin:0px 10px}#promotion .links a:hover{color:#adff2f;text-decoration:underline}*{font-family:"Roboto",Arial,sans-serif;box-sizing:border-box;color:#333}
+/*!*******************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/scss/styles.scss (1) ***!
+  \*******************************************************************************************************************/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  background-color: transparent;
+  width: 1440px;
+  height: 80px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 1440px) {
+  header {
+    width: 100%;
+  }
+}
+header .logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+  z-index: 2;
+  margin-left: 30px;
+}
+header nav {
+  z-index: 2;
+  height: 100%;
+}
+header nav a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 100%;
+  width: 100px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+  text-align: center;
+}
+header nav a:hover .nav_border {
+  transform: scale(1);
+}
+header nav a .nav_border {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  height: 3px;
+  width: 100%;
+  border-radius: 1.5px;
+  background-color: red;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: all ease-in-out 0.3s;
+}
+header .myPage {
+  z-index: 2;
+  margin-right: 30px;
+}
+header .myPage a {
+  margin: 0 10px;
+  font-size: 22px;
+  z-index: 2;
+}
+header .myPage a i {
+  color: #fff;
+}
+header .header_bg {
+  position: absolute;
+  background-color: #fff;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  transform: translateY(-100%);
+  transition: all ease-in-out 0.3s;
+}
+
+header.on a {
+  color: #333;
+}
+header.on i {
+  color: #333;
+}
+header.on .myPage i {
+  color: #333;
+}
+
+main.home .banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: tomato;
+}
+main.home .banner .slider {
+  position: relative;
+  width: 100%;
+  height: 60vh;
+}
+main.home .banner .slider .slide {
+  position: absolute;
+  display: flex;
+  height: 100%;
+  transform: translateX(0vw);
+}
+main.home .banner .slider .slide .item {
+  width: calc(100vw - 400px);
+  margin: 0 200px;
+  height: 100%;
+}
+main.home .banner .slider button {
+  position: absolute;
+  transform: translateY(-50%);
+}
+main.home .banner .slider button:nth-of-type(1) {
+  right: 5%;
+  top: 50%;
+}
+main.home .banner .slider button:nth-of-type(2) {
+  left: 5%;
+  top: 50%;
+}
+
+#promotion {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+#promotion h1 {
+  font-size: 48px;
+  font-weight: bold;
+}
+#promotion .links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px 0px;
+}
+#promotion .links a {
+  font-size: 34px;
+  font-weight: bold;
+  margin: 0px 10px;
+}
+#promotion .links a:hover {
+  color: greenyellow;
+  text-decoration: underline;
+}
+
+* {
+  font-family: "Roboto", Arial, sans-serif;
+  box-sizing: border-box;
+  color: #333;
+}
