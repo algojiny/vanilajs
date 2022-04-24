@@ -7,12 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/public/css/style.css">
     <!--// 모든페이지 동일 css 주소-->
-
-    <title>Home</title>
+    <title>Login</title>
 <script defer src="../js/main.js"></script><link href="../css/style.css" rel="stylesheet"></head>
 
 <body>
-    <div class="wrap" id="home">
+    <div class="wrap" id="login">
         <header>
             <h1 class="logo">
                 <a href="./home.html">CATOPIA</a>
@@ -41,65 +40,18 @@
             </div>
             <div class="header_bg"></div>
         </header>
-        <main class="home">
-            <section class="banner">
-                <div class="slider">
-                    <div class="slide">
-                        <div class="item on" data-slide-img="1">
-                            <img src="../assets/images/slider_1.jpeg" alt="">
-                            <div class="introduce_cat">
-                                <span class="cat_name">1번 고양이</span>
-                                <span class="cat_desc">1번 고양이는 이쁩니다.</span>
-                            </div>
-                        </div>
-                        <div class="item" data-slide-img="2">
-                            <img src="../assets/images/slider_2.jpeg" alt="">
-                            <div class="introduce_cat">
-                                <span class="cat_name">2번 고양이</span>
-                                <span class="cat_desc">2번 고양이는 이쁩니다.</span>
-                            </div>
-                        </div>
-                        <div class="item" data-slide-img="3">
-                            <img src="../assets/images/slider_3.jpeg" alt="">
-                            <div class="introduce_cat">
-                                <span class="cat_name">3번 고양이</span>
-                                <span class="cat_desc">3번 고양이는 이쁩니다.</span>
-                            </div>
-                        </div>
-                        <div class="item" data-slide-img="4">
-                            <img src="../assets/images/slider_4.jpeg" alt="">
-                            <div class="introduce_cat">
-                                <span class="cat_name">4번 고양이</span>
-                                <span class="cat_desc">4번 고양이는 이쁩니다.</span>
-                            </div>
-                        </div>
-                        <div class="item" data-slide-img="5">
-                            <img src="../assets/images/slider_5.jpeg" alt="">
-                            <div class="introduce_cat">
-                                <span class="cat_name">5번 고양이</span>
-                                <span class="cat_desc">5번 고양이는 이쁩니다.</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!--// slide-->
-                    <button class="button nextBtn">
-                        <i class="fa-solid fa-circle-chevron-right"></i>
-                    </button>
-                    <button class="button prevBtn">
-                        <i class="fa-solid fa-circle-chevron-left"></i>
-                    </button>
-                </div>
-                <!--// slider-->
-            </section>
-
-            <section class="newCats">
-
-            </section>
-
-            <section class="onSale">
-
-            </section>
+        <main class="login">
+            <div class="blankBox"></div>
+            <h2>로그인</h2>
+            <span class="benefits">롯데스위트몰 회원으로 로그인하시면<br>다양한 서비스를 이용하실 수 있습니다.</span>
+            <form class="loginForm">
+                <input class="input_id" type="text" placeholder="아이디">
+                <input class="input_password" type="password" placeholder="비밀번호">
+                <button class="login_button">로그인</button>
+                <a href="./join.html">캐토피아 회원가입</a>
+            </form>
         </main>
+
         <footer>
             <div class="footer_nav">
                 <div class="ours">
@@ -170,4 +122,4 @@
     <!--모든페이지 동일 js 주소-->
 </body>
 
-</html
+</html>

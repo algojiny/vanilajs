@@ -1,19 +1,36 @@
 export default home;
-
+const banner = document.querySelector(".banner");
+const slide = document.querySelector(".slide");
+const items = document.querySelectorAll(".item");
+const bgColor = [
+  "tomato",
+  "skyblue",
+  "darkseagreen",
+  "pink",
+  "darkslategrey",
+  "slateblue",
+  "gainsboro",
+  "darkcyan",
+  "goldenrod",
+  "lightcoral",
+  "khaki",
+  "gray",
+  "mediumpurple",
+  "#222",
+  "saddlebrown",
+  "mediumvioletred",
+  "steelblue",
+];
 const next = document.querySelector(".nextBtn");
 const prev = document.querySelector(".prevBtn");
-const slide = document.querySelector(".slide");
-
-const items = document.querySelectorAll(".item");
 const maxIndex = items.length;
 
 const firstChild = document.querySelector(".item:first-child");
 const lastChild = document.querySelector(".item:last-child");
 const firstClone = firstChild.cloneNode(true);
 const lastClone = lastChild.cloneNode(true);
-const TRANSITION = "transition: all linear 0.3s;";
+const TRANSITION = "transition: all linear 0.2s;";
 
-console.log(lastClone);
 slide.append(firstClone);
 slide.prepend(lastClone);
 
@@ -39,6 +56,11 @@ function nextSlide() {
     }, 300);
     index = 0;
   }
+  banner.style = `background-color: ${
+    bgColor[Math.round(Math.random() * bgColor.length)]
+  }`;
+  items.forEach((item) => item.classList.remove("on"));
+  items[index].classList.add("on");
 }
 function prevSlide() {
   if (index !== 0) {
@@ -53,4 +75,9 @@ function prevSlide() {
     }, 300);
     index = maxIndex - 1;
   }
+  banner.style = `background-color: ${
+    bgColor[Math.round(Math.random() * bgColor.length)]
+  }`;
+  items.forEach((item) => item.classList.remove("on"));
+  items[index].classList.add("on");
 }

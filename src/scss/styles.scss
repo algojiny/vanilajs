@@ -5,14 +5,22 @@
 // config
 
 @import "./components/header.scss";
+@import "./components/footer.scss";
 // components
 
 @import "./screen/home.scss";
 @import "./screen/promotion.scss";
+@import "./screen/login.scss";
 // screen
 
 * {
   font-family: "Roboto", Arial, sans-serif;
   box-sizing: border-box;
   color: #333;
+}
+.wrap {
+  width: 1440px;
+  @include max(1440px) {
+    width: 100%;
+  }
 }

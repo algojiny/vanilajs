@@ -1,0 +1,69 @@
+@import "../config/mixin";
+@import "../config/variables";
+
+main.login {
+  width: 100%;
+  height: 100vh;
+  .blankBox {
+    height: 80px;
+  }
+  h2 {
+    text-align: center;
+    font-size: 38px;
+    font-weight: bold;
+    margin: 100px 0px 20px 0px;
+  }
+  .benefits {
+    display: block;
+    text-align: center;
+    width: max-content;
+    margin: 0 auto;
+    line-height: 1.6;
+    color: gray;
+    margin-bottom: 30px;
+  }
+  form.loginForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 400px;
+    height: 270px;
+    margin: 0 auto;
+    input {
+      width: 100%;
+      height: 60px;
+      outline: none;
+      background-color: #f1f1f1;
+      border: none;
+      border-radius: 5px;
+      padding: 0px 10px;
+      font-size: 16px;
+    } // input
+    button,
+    a {
+      width: 100%;
+      height: 60px;
+      border: none;
+      border-radius: 5px;
+      font-size: 18px;
+      cursor: pointer;
+    }
+    button {
+      background-color: #ef2a23;
+      color: #fff;
+      &:hover {
+        background-color: #d5201a;
+      }
+    }
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid #d9d9d9;
+      &:hover {
+        background-color: #f1f1f1;
+      }
+    }
+  } // form
+} // main
