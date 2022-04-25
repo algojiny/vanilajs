@@ -9,6 +9,7 @@ let multipleHtmlPlugins = htmlPageNames.map((name) => {
   return new HtmlWebpackPlugin({
     template: `src/views/${name}.html`,
     filename: `views/${name}.html`,
+    chunks: [`${name}`, "index"],
   });
 });
 
@@ -22,12 +23,17 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: "src/index.html",
       filename: "index.html",
+      chunks: ["index"],
     }),
   ].concat(multipleHtmlPlugins),
 
-  entry: "./src/js/index.js",
+  entry: {
+    index: "./src/js/index.js",
+    home: "./src/js/screen/home.js",
+    login: "./src/js/screen/login.js",
+  },
   output: {
-    filename: "js/main.js",
+    filename: "js/[name].js",
     path: path.resolve(__dirname, "public"),
     clean: true,
   },

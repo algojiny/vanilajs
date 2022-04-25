@@ -1,4 +1,3 @@
-export default home;
 const banner = document.querySelector(".banner");
 const slide = document.querySelector(".slide");
 const items = document.querySelectorAll(".item");
@@ -81,3 +80,5 @@ function prevSlide() {
   items.forEach((item) => item.classList.remove("on"));
   items[index].classList.add("on");
 }
+
+export default home;

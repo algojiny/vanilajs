@@ -20,3 +20,5 @@ window.addEventListener("scroll", function (event) {
     header.style = "display: flex;";
   }
 });
+
+export default header;
