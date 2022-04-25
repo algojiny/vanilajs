@@ -15,7 +15,7 @@
   \*************************************/
 /***/ (() => {
 
-eval("var header = document.querySelector(\".header_inner\");\nvar nav = document.querySelector(\"header nav\");\nvar headerBg = document.querySelector(\".header_bg\");\nnav.addEventListener(\"mouseover\", function () {\n  headerBg.style = \"transform: translateY(0%);\";\n  header.classList.add(\"on\");\n});\nnav.addEventListener(\"mouseleave\", function () {\n  headerBg.style = \"transform: translateY(-100%);\";\n  header.classList.remove(\"on\");\n});\n\n//# sourceURL=webpack://vanilajs/./src/js/components/header.js?");
+eval("var header = document.querySelector(\"header\");\nvar header_inner = document.querySelector(\".header_inner\");\nvar nav = document.querySelector(\"header nav\");\nvar headerBg = document.querySelector(\".header_bg\");\nnav.addEventListener(\"mouseover\", function () {\n  headerBg.style = \"transform: translateY(0%);\";\n  header_inner.classList.add(\"on\");\n});\nnav.addEventListener(\"mouseleave\", function () {\n  headerBg.style = \"transform: translateY(-100%);\";\n  header_inner.classList.remove(\"on\");\n});\nwindow.addEventListener(\"scroll\", function (event) {\n  var scorllY = this.window.scrollY;\n\n  if (this.scrollY > 150) {\n    header.style = \"display: none;\";\n  } else {\n    header.style = \"display: flex;\";\n  }\n});\n\n//# sourceURL=webpack://vanilajs/./src/js/components/header.js?");
 
 /***/ }),
 

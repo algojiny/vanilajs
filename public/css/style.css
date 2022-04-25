@@ -389,6 +389,7 @@ main.home section.banner .slider .slide .item .introduce_cat {
   align-items: center;
   position: absolute;
   left: 50%;
+  bottom: -80px;
   transform: translate(-50%, 80px);
   opacity: 0;
   transition: all linear 0.5s;
@@ -426,7 +427,7 @@ main.home section.banner .slider button i:hover {
   color: #fff;
 }
 main.home section.banner .slider button:nth-of-type(1) {
-  right: 5%;
+  right: 4%;
   top: 50%;
 }
 main.home section.banner .slider button:nth-of-type(2) {
