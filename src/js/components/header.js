@@ -1,4 +1,4 @@
-const header = document.querySelector("header");
+const header = document.querySelector(".header_inner");
 const nav = document.querySelector("header nav");
 const headerBg = document.querySelector(".header_bg");
 
