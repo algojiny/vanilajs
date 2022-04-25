@@ -20,4 +20,11 @@
 }
 .wrap {
   width: 100%;
+  main {
+    width: 1440px;
+    margin: 0 auto;
+    @include max(1440px) {
+      width: 100%;
+    }
+  }
 }

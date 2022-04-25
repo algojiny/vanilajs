@@ -544,3 +544,12 @@ main.login form.loginForm a:hover {
 .wrap {
   width: 100%;
 }
+.wrap main {
+  width: 1440px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 1440px) {
+  .wrap main {
+    width: 100%;
+  }
+}
