@@ -5,7 +5,7 @@ const inputPassword = document.querySelector(".input_password");
 loginForm.addEventListener("submit", handleSubmit);
 
 function handleSubmit(event) {
-  event.peventDefault();
+  event.preventDefault();
   console.log(event);
 }
 
