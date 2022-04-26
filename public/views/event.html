@@ -7,11 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/public/css/style.css">
     <!--// 모든페이지 동일 css 주소-->
-    <title>Login</title>
-</head>
+
+    <title>event</title>
+<script defer src="../js/index.js"></script><link href="../css/style.css" rel="stylesheet"></head>
 
 <body>
-    <div class="wrap" id="login">
+    <div class="wrap" id="event">
         <header>
             <div class="header_inner">
                 <h1 class="logo">
@@ -22,7 +23,7 @@
                         고양이들
                         <div class="nav_border"></div>
                     </a>
-                    <a href="#">
+                    <a href="./event.html">
                         이벤트
                         <div class="nav_border"></div>
                     </a>
@@ -42,18 +43,48 @@
                 <div class="header_bg"></div>
             </div>
         </header>
-        <main class="login">
-            <div class="blankBox"></div>
-            <h2>로그인</h2>
-            <span class="benefits">롯데스위트몰 회원으로 로그인하시면<br>다양한 서비스를 이용하실 수 있습니다.</span>
-            <form id="loginForm">
-                <input class="input_id" type="text" placeholder="아이디">
-                <input class="input_password" type="password" placeholder="비밀번호">
-                <button class="login_button">로그인</button>
-                <a href="./join.html">캐토피아 회원가입</a>
-            </form>
-        </main>
+        <main class="event">
+            <section class="event">
+                <h2>이벤트</h2>
+                <ul class="event_menu">
+                    <li>진행중 이벤트</li>
+                    <li>종료된 이벤트</li>
+                    <li>당첨자 발표</li>
+                </ul>
+                <ul>
+                    <li class="ongoing">
+                        <!--진행중 이벤트-->
+                        <ul>
+                            <li>
+                                <img src="" alt="진행중 이벤트1">
+                                <div>진행중 이벤트 설명</div>
+                            </li>
+                            <li>
+                                <img src="" alt="진행중 이벤트2">
+                                <div>진행중 이벤트 설명</div>
+                            </li>
+                            <li>
+                                <img src="" alt="진행중 이벤트3">
+                                <div>진행중 이벤트 설명</div>
+                            </li>
+                        </ul>
+                        <div class="ongoing_btn">
+                            <button class="round"> &lt; </button>
+                            <button class="round"> 1 </button>
+                            <button class="round"> &gt; </button>
+                        </div>
+                    </li>
+                    <li class="finished">
+                        <!--종료된 이벤트-->
 
+                    </li>
+                    <li class="announce">
+                        <!--당첨자 발표-->
+
+                    </li>
+                </ul>
+            </section>
+        </main>
         <footer>
             <div class="footer_inner">
                 <div class="footer_nav">
@@ -120,9 +151,9 @@
 
 
 
-
+    <!--모든페이지 동일 js 주소-->
     <script src="https://kit.fontawesome.com/295e7141fb.js" crossorigin="anonymous"></script>
-    <!--font awasome-->
+    <!--모든페이지 동일 js 주소-->
 </body>
 
-</html>
+</html

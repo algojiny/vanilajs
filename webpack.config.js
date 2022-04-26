@@ -32,6 +32,7 @@ module.exports = {
     index: "./src/js/index.js",
     home: "./src/js/screen/home.js",
     login: "./src/js/screen/login.js",
+    join: "./src/js/screen/join.js",
   },
   output: {
     filename: "js/[name].js",
