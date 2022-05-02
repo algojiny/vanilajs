@@ -1,6 +1,37 @@
 @import "../config/mixin";
 @import "../config/variables";
 
+#event.wrap header{
+    background-color: #008F01;
+}
 main.event {
-    background-color: yellow; // test
+    background-color: #008F01 ;
+    padding-top: 120px;
+    section.event {
+        h2{
+            color: #fff;
+            font-size: 50px;
+            text-align: center;
+        }
+        ul.event_menu{
+            @include flex_row(space-between, center);
+            width: 50%;
+            margin: 40px auto;
+            li{
+                color: #3F4A3C;
+                height: 25px;
+                font-size: 20px;
+                padding: 0 10px;
+                &:hover {
+                    color: #fff;
+                    border-bottom: 2px solid tomato;
+                }
+                &:on {
+                    color: #fff;
+                    border-bottom: 2px solid tomato;
+                }
+            }
+        }
+    }
 } // main
+
