@@ -1,37 +1,105 @@
 @import "../config/mixin";
 @import "../config/variables";
 
-#event.wrap header{
-    background-color: #008F01;
+#event.wrap header {
+  background-color: #008F01;
 }
-main.event {
-    background-color: #008F01 ;
-    padding-top: 120px;
-    section.event {
-        h2{
-            color: #fff;
-            font-size: 50px;
-            text-align: center;
-        }
-        ul.event_menu{
-            @include flex_row(space-between, center);
-            width: 50%;
-            margin: 40px auto;
-            li{
-                color: #3F4A3C;
-                height: 25px;
-                font-size: 20px;
-                padding: 0 10px;
-                &:hover {
-                    color: #fff;
-                    border-bottom: 2px solid tomato;
-                }
-                &:on {
-                    color: #fff;
-                    border-bottom: 2px solid tomato;
-                }
-            }
-        }
-    }
-} // main
 
+main.event {
+  background-color: #008F01;
+  padding-top: 120px;
+
+  section.event {
+    h2 {
+      color: #fff;
+      font-size: 45px;
+      text-align: center;
+    }
+
+    ul.event_menu {
+      @include flex_row(space-between, center);
+      width: 50%;
+      margin: 40px auto;
+
+      li {
+        color: #3F4A3C;
+        height: 35px;
+        font-size: 25px;
+        padding: 0 10px;
+        cursor: pointer;
+
+        &:hover {
+          color: #fff;
+          border-bottom: 3px solid tomato;
+        }
+
+        &.on {
+          color: #fff;
+          border-bottom: 3px solid tomato;
+        }
+      }
+    }//ul.event_menu
+    ul.event_container{
+      border: 1px solid #fff;
+      width: 80%;
+      margin: 0 auto;
+
+      li.ongoing, li.finished, li.announce{
+        width: 100%;
+
+        ul.ongoing_box, ul.finished_box{
+          @include flex_row(space-between,center);
+          flex-wrap: wrap;
+
+          li{
+            position: relative;
+            width: 32%;
+            padding-top: 23%;
+            margin-bottom: 30px;
+            // border: 1px solid red;
+            img{
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: calc(100% - 30px);
+              background-color: #fff;
+              border-radius: 10%;
+            }
+            div{
+              font-size: 20px;
+              text-align: center;
+            }
+          }
+        }
+
+        div.ongoing_btn, div.finished_btn{
+          text-align: center;
+          margin: 50px 0;
+          
+          button{
+            font-size: 25px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            i{
+              color: #fff;
+              opacity: 0.5;
+              &:hover{
+                opacity: 1;
+              }
+            }
+          }
+        }
+      } //li.ongoing
+    }
+  }
+}
+
+// main
+/* .ongoing{
+  display: none;
+} */
+.finished{
+  display: none;
+}
