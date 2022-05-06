@@ -40,8 +40,8 @@ main.event {
       }
     }//ul.event_menu
     ul.event_container{
-      border: 1px solid #fff;
-      width: 80%;
+      // border: 1px solid #fff;
+      width: 85%;
       margin: 0 auto;
 
       li.ongoing, li.finished, li.announce{
@@ -53,7 +53,7 @@ main.event {
 
           li{
             position: relative;
-            width: 32%;
+            width: 30%;
             padding-top: 23%;
             margin-bottom: 30px;
             // border: 1px solid red;
@@ -75,13 +75,20 @@ main.event {
 
         div.ongoing_btn, div.finished_btn{
           text-align: center;
-          margin: 50px 0;
           
           button{
-            font-size: 25px;
+            font-size: 20px;
             background: none;
             border: none;
+            padding: 50px 15px;
             cursor: pointer;
+            &:hover{
+              transform: scale(1.2);
+            }
+            &.on{
+                transform: scale(1.2);
+                text-decoration: underline;
+              }
             i{
               color: #fff;
               opacity: 0.5;
@@ -91,7 +98,79 @@ main.event {
             }
           }
         }
-      } //li.ongoing
+      } //li.ongoing, li.finished
+      li.announce{
+        background-color: #fff;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+
+        form{
+          text-align: right;
+          padding: 20px;
+          select{
+            width: 100px;
+            font-size: 16px;
+            padding: 5px 10px;
+            border-radius: 5px;
+          }
+          input{
+            width: 250px;
+            font-size: 16px;
+            padding: 5px 10px;
+            background-color: #d9d9d9;
+            border-style: solid;
+            border-color: #d9d9d9;
+            border-radius: 5px;
+          }
+        }
+        div.tableBox{
+          width: 100%;
+          table{
+            width: 100%;
+            text-align: center;
+            thead{
+              border-top: 1px solid #333;
+              td{
+                font-size: 20px;
+                font-weight: bold;
+                padding: 20px 0;
+              }
+            }
+            tbody{
+              td{
+                padding: 20px;
+                border-top: 1px solid #d9d9d9;
+                border-bottom: 1px solid #d9d9d9;
+              }
+            }
+          }
+        }
+        div.announce_btn{
+          text-align: center;
+          
+          button{
+            font-size: 20px;
+            background: none;
+            border: none;
+            padding: 50px 15px;
+            cursor: pointer;
+            &:hover{
+              transform: scale(1.2);
+            }
+            &.on{
+              transform: scale(1.2);
+              text-decoration: underline;
+            }
+            i{
+              color: #008F01;
+              opacity: 0.5;
+              &:hover{
+                opacity: 1;
+              }
+            }
+          }
+        }
+      }//li.announce
     }
   }
 }
@@ -100,6 +179,9 @@ main.event {
 /* .ongoing{
   display: none;
 } */
-.finished{
+.finished, .announce, .table_2, .table_3{
   display: none;
 }
+/* .finished_box_2, .finished_box_3{
+  display: none;
+} */
