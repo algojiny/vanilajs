@@ -1,6 +1,11 @@
 const banner = document.querySelector(".banner");
 const slide = document.querySelector(".slide");
 const items = document.querySelectorAll(".item");
+let base = banner.getBoundingClientRect();
+
+window.addEventListener("resize", () => {
+  base = banner.getBoundingClientRect();
+});
 const bgColor = [
   "tomato",
   "skyblue",
@@ -33,8 +38,6 @@ const TRANSITION = "transition: all linear 0.2s;";
 slide.append(firstClone);
 slide.prepend(lastClone);
 
-slide.style = `transform: translateX(-100vw);`;
-
 let index = 0;
 
 next.addEventListener("click", nextSlide);
@@ -43,15 +46,15 @@ prev.addEventListener("click", prevSlide);
 function nextSlide() {
   if (index < maxIndex - 1) {
     slide.style = `transform: translateX(-${
-      (index + 2) * 100
-    }vw); ${TRANSITION}`;
+      (index + 2) * base.width
+    }px); ${TRANSITION}`;
     index = index + 1;
   } else {
     slide.style = `transform: translateX(-${
-      (index + 2) * 100
-    }vw); ${TRANSITION}`;
+      (index + 2) * base.width
+    }px); ${TRANSITION}`;
     setTimeout(() => {
-      slide.style = `transform: translateX(-${100}vw);`;
+      slide.style = `transform: translateX(${-base.width}px);`;
     }, 300);
     index = 0;
   }
@@ -63,14 +66,18 @@ function nextSlide() {
 }
 function prevSlide() {
   if (index !== 0) {
-    slide.style = `transform: translateX(-${index * 100}vw); ${TRANSITION}`;
+    slide.style = `transform: translateX(-${
+      index * base.width
+    }px); ${TRANSITION}`;
     index = index - 1;
   } else {
-    slide.style = `transform: translateX(-${index * 100}vw); ${TRANSITION}`;
+    slide.style = `transform: translateX(-${
+      index * base.width
+    }px); ${TRANSITION}`;
     setTimeout(() => {
       slide.style = `transform: translateX(-${
-        maxIndex * 100
-      }vw); transition: all linear 0s`;
+        maxIndex * base.width
+      }px); transition: all linear 0s`;
     }, 300);
     index = maxIndex - 1;
   }
@@ -81,4 +88,6 @@ function prevSlide() {
   items[index].classList.add("on");
 }
 
+slide.style.width = `${(maxIndex + 2) * base.width}px`;
+slide.style = `transform: translateX(${-base.width}px)`;
 export default home;

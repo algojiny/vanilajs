@@ -5,17 +5,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/css/style.css">
     <!--// 모든페이지 동일 css 주소-->
 
-    <title>Home</title>
-</head>
+    <title>Join</title>
+<script defer src="../js/index.js"></script><script defer src="../js/join.js"></script><link href="../css/style.css" rel="stylesheet"></head>
 
 <body>
-    <div class="wrap" id="home">
+    <div class="wrap" id="join">
         <header>
             <div class="header_inner">
                 <h1 class="logo">
-                    <a href="./home.html">CATOPIA</a>
+                    <a id="toHome" href="./home.html">CATOPIA</a>
                 </h1>
                 <nav>
                     <a href="#">
@@ -41,65 +42,35 @@
                 <div class="header_bg"></div>
             </div>
         </header>
-
-        <main class="home">
-            <section class="banner">
-                <div class="slider">
-                    <div class="slide">
-                        <div class="item on" data-slide-img="1">
-                            <img src="../assets/images/slider_1.jpeg" alt="">
-                            <div class="introduce_cat">
-                                <span class="cat_name">1번 고양이</span>
-                                <span class="cat_desc">1번 고양이는 이쁩니다.</span>
-                            </div>
-                        </div>
-                        <div class="item" data-slide-img="2">
-                            <img src="../assets/images/slider_2.jpeg" alt="">
-                            <div class="introduce_cat">
-                                <span class="cat_name">2번 고양이</span>
-                                <span class="cat_desc">2번 고양이는 이쁩니다.</span>
-                            </div>
-                        </div>
-                        <div class="item" data-slide-img="3">
-                            <img src="../assets/images/slider_3.jpeg" alt="">
-                            <div class="introduce_cat">
-                                <span class="cat_name">3번 고양이</span>
-                                <span class="cat_desc">3번 고양이는 이쁩니다.</span>
-                            </div>
-                        </div>
-                        <div class="item" data-slide-img="4">
-                            <img src="../assets/images/slider_4.jpeg" alt="">
-                            <div class="introduce_cat">
-                                <span class="cat_name">4번 고양이</span>
-                                <span class="cat_desc">4번 고양이는 이쁩니다.</span>
-                            </div>
-                        </div>
-                        <div class="item" data-slide-img="5">
-                            <img src="../assets/images/slider_5.jpeg" alt="">
-                            <div class="introduce_cat">
-                                <span class="cat_name">5번 고양이</span>
-                                <span class="cat_desc">5번 고양이는 이쁩니다.</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!--// slide-->
-                    <button class="button nextBtn">
-                        <i class="fa-solid fa-circle-chevron-right"></i>
-                    </button>
-                    <button class="button prevBtn">
-                        <i class="fa-solid fa-circle-chevron-left"></i>
-                    </button>
-                </div>
-                <!--// slider-->
-            </section>
-
-            <section class="newCats">
-
-            </section>
-
-            <section class="onSale">
-
-            </section>
+        <main class="join">
+            <div class="blankBox"></div>
+            <h2 class="join_title">
+                회원가입
+            </h2>
+            <span class="benefits">회원가입하시면 첫 분양 30%할인을<br>받으실 수 있습니다.</span>
+            <form class="join_form">
+                <article class="form_name">
+                    <label for="join_name">이름</label>
+                    <input id="join_name" type="text" placeholder="이름">
+                </article>
+                <article class="form_id">
+                    <label for="join_id">아이디</label>
+                    <input id="join_id" type="text" placeholder="8자 이상">
+                </article>
+                <article class="form_password">
+                    <label for="join_password">비밀번호</label>
+                    <input id="join_password" type="password" placeholder="영문/숫자 8자 이상">
+                </article>
+                <article class="form_password_check">
+                    <label for="join_password_check">비밀번호</label>
+                    <input id="join_password_check" type="password" placeholder="영문/숫자 8자 이상">
+                </article>
+                <article class="form_nickname">
+                    <label for="join_nickname">닉네임</label>
+                    <input id="join_nickname" type="text" placeholder="2자 이상">
+                </article>
+                <button class="join_button">회원가입</button>
+            </form>
         </main>
 
         <footer>
@@ -163,11 +134,7 @@
                 </div>
             </div>
         </footer>
-
     </div>
-
-
-
 
     <script src="https://kit.fontawesome.com/295e7141fb.js" crossorigin="anonymous"></script>
     <!--font awasome-->
