@@ -23,7 +23,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: "src/index.html",
       filename: "index.html",
-      chunks: ["index"],
+      chunks: ["index", "promotion"],
     }),
   ].concat(multipleHtmlPlugins),
 
@@ -34,6 +34,7 @@ module.exports = {
     login: "./src/js/screen/login.js",
     join: "./src/js/screen/join.js",
     event: "./src/js/screen/event.js",
+    promotion: "./src/js/screen/promotion.js",
   },
   output: {
     filename: "js/[name].js",
