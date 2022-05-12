@@ -13,9 +13,7 @@
       pointer-events: none;
     }
     article[class*="show_"] {
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      @include flex_row(center, center);
       position: absolute;
       width: max-content;
       transition: all linear 0.5s;
@@ -58,10 +56,10 @@
         animation: showPromotion 0.5s linear forwards;
       }
     } // article
-    section.dragEvent {
+    section.gameEvent {
       height: 800px;
       width: 100%;
-      h2.dragEvent_title {
+      h2.gameEvent_title {
         font-size: 38px;
         font-weight: 700;
         text-align: center;
@@ -73,7 +71,7 @@
         border-radius: 50px;
         box-shadow: 0px 10px 5px 0px rgba($color: #333, $alpha: 0.3);
       }
-      span.dragEvent_desc {
+      span.gameEvent_desc {
         display: block;
         font-size: 28px;
         color: #fff;
@@ -82,13 +80,16 @@
         text-shadow: 0px 5px 3px rgba($color: #333, $alpha: 0.6);
       }
       article.eventBox {
+        position: relative;
         width: 70%;
         height: 500px;
         background-color: #f1f1f1;
         border-radius: 30px;
         margin: 30px auto;
-        .start {
-          display: flex;
+        div {
+          display: none;
+        }
+        .startEvent {
           justify-content: center;
           align-items: center;
           width: 100%;
@@ -102,11 +103,96 @@
             border-radius: 100px;
             border: 10px solid #efefef;
             cursor: pointer;
-            box-shadow: 0px 10px 10px 0px rgba($color: #333, $alpha: 0.2);
+            box-shadow: 0px 10px 10px 0px rgba($color: #333, $alpha: 0.3);
             &:hover {
               transform: scale(0.95);
             }
           }
+        } // startEvent
+        .dragEvent {
+          flex-direction: column;
+          align-items: center;
+          justify-content: space-between;
+          height: 100%;
+          width: 100%;
+          padding: 30px 10px;
+          h3.event_desc {
+            font-size: 24px;
+            font-weight: bold;
+            em {
+              background-color: #333;
+              padding: 5px 10px;
+              border-radius: 5px;
+              color: #fff;
+              margin-right: 10px;
+            }
+          }
+          .dragArea {
+            @include flex_column(space-between, center);
+            width: 100%;
+            height: 250px;
+            padding: 0px 30px;
+            .draggables {
+              display: grid;
+              grid-template-columns: repeat(6, 1fr);
+              width: 100%;
+              height: 100px;
+              gap: 15px;
+              .draggable {
+                @include flex_row(center, center);
+                width: 100%;
+                height: 100%;
+                background-color: slateblue;
+                box-shadow: 0px 10px 10px 0px rgba($color: #333, $alpha: 0.3);
+                color: #fff;
+                font-size: 28px;
+                font-weight: bold;
+                border-radius: 10px;
+                overflow: hidden;
+                cursor: pointer;
+              }
+            }
+            .droppables {
+              display: grid;
+              grid-template-columns: repeat(6, 1fr);
+              width: 100%;
+              height: 100px;
+              gap: 15px;
+              .droppable {
+                @include flex_row(center, center);
+                width: 100%;
+                height: 100%;
+                border: 3px solid slateblue;
+                border-radius: 10px;
+                transition: all 0.2s ease-in-out;
+                &.over {
+                  border: 3px dashed slateblue;
+                }
+                &.on {
+                  background-color: slateblue;
+                }
+              }
+            }
+          } // dragArea
+          button.checkAnswer {
+            width: 150px;
+            height: 50px;
+            border: none;
+            border-radius: 5px;
+            background-color: #333;
+            color: #fff;
+            font-size: 24px;
+            font-weight: bold;
+            box-shadow: 0px 10px 10px 0px rgba($color: #333, $alpha: 0.2);
+            cursor: pointer;
+            &:hover {
+              transform: scale(103%);
+              color: tomato;
+            }
+          }
+        } // dragEvent
+        .on {
+          display: flex;
         }
       } // eventBox
     } // dragEvent

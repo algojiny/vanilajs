@@ -71,16 +71,44 @@
 
                 <div class="heightBox"></div>
 
-                <section class="dragEvent">
-                    <h2 class="dragEvent_title">첫고객 이벤트</h2>
-                    <span class="dragEvent_desc">
+                <section class="gameEvent">
+                    <h2 class="gameEvent_title">첫고객 이벤트</h2>
+                    <span class="gameEvent_desc">
                         총 3개 문제를 다 맞출시 50% 할인쿠폰 지급. 선착순 300명!
                     </span>
                     <article class="eventBox">
-                        <div class="start">
+                        <div class="startEvent on">
                             <span class="playBtn">Play now</span>
                         </div>
+                        <!--// start-->
+                        <div class="dragEvent">
+                            <h3 class="event_desc">
+                                <em>문제1</em>
+                                <span>캐토피아 스펠링에 맞게 드래그 해보세요.</span>
+                            </h3>
+                            <div class="dragArea">
+                                <div class="draggables">
+                                    <div draggable="true" data-drag-index="1" class="draggable">O</div>
+                                    <div draggable="true" data-drag-index="2" class="draggable">C</div>
+                                    <div draggable="true" data-drag-index="3" class="draggable">T</div>
+                                    <div draggable="true" data-drag-index="4" class="draggable">I</div>
+                                    <div draggable="true" data-drag-index="5" class="draggable">A</div>
+                                    <div draggable="true" data-drag-index="6" class="draggable">P</div>
+                                </div>
+                                <div class="droppables dropZon">
+                                    <div dropzone="" data-answer-index="2" class="droppable"></div>
+                                    <div dropzone="" data-answer-index="5" class="droppable"></div>
+                                    <div dropzone="" data-answer-index="3" class="droppable"></div>
+                                    <div dropzone="" data-answer-index="1" class="droppable"></div>
+                                    <div dropzone="" data-answer-index="6" class="droppable"></div>
+                                    <div dropzone="" data-answer-index="5" class="droppable"></div>
+                                </div>
+                            </div>
+                            <button class="checkAnswer">정답확인</button>
+                        </div>
+                        <!--// dragEvent-->
                     </article>
+                    <!--// eventBox-->
                 </section>
             </main>
         </div>
