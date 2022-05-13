@@ -44,6 +44,42 @@ function finishedOn(){
     }//finishedBoxs change효과  
 }
 
+const preBtn = document.querySelector(".pre");
+const nextBtn = document.querySelector(".next");
+
+preBtn.addEventListener("click", prePage);
+nextBtn.addEventListener("click", nextPage);
+
+function prePage(){
+    for( var i = 1 ; i < finishedBoxs.length; i++){
+        if(finishedNumBtns[i].classList.contains("on")){
+
+            finishedNumBtns.forEach(numBtn=>{numBtn.classList.remove("on")});
+            finishedBoxs.forEach(finishedBox=>{finishedBox.style.display="none"});
+
+            finishedNumBtns[i-1].classList.add("on");
+            finishedBoxs[i-1].style.display = "flex";
+
+        }
+    }
+}
+
+function nextPage(){
+    for( var i = 0 ; i < finishedBoxs.length-1; i++){
+        if(finishedNumBtns[i].classList.contains("on")){
+
+            finishedNumBtns.forEach(numBtn=>{numBtn.classList.remove("on")});
+            finishedBoxs.forEach(finishedBox=>{finishedBox.style.display="none"});
+
+            i+=1
+            finishedNumBtns[i].classList.add("on");
+            finishedBoxs[i].style.display = "flex";
+
+        }
+    }
+}
+
+
 //당첨자 발표
 const announceBoxs = document.querySelectorAll(".announce table");
 const announceBtns = document.querySelectorAll(".announce_btn .num");
