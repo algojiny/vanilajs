@@ -20,13 +20,37 @@ function menuOn(){
 //종료된 이벤트
 const finishedBoxs = document.querySelectorAll(".finished_box");
 const finishedNumBtns = document.querySelectorAll(".finished_btn .num");
+// var fBtns = Array.from(finishedNumBtns);
+// var fBoxs = Array.from(finishedBoxs);
+
+function pageOn(){
+    if(eMenus[1].classList.contains("on")){
+        for(var i = 0 ; i < finishedNumBtns.length; i++){
+            if(finishedNumBtns[i].classList.contains("on")){
+                finishedBoxs.forEach(finishedBox=>{finishedBox.style.display="none"});
+                finishedBoxs[i].style.display="flex";
+            }
+        }
+
+    }if(eMenus[2].classList.contains("on")){
+        for(var i = 0 ; i < announceBtns.length; i++){
+            if(announceBtns[i].classList.contains("on")){
+                announceBoxs.forEach(announceBox=>{announceBox.style.display="none"});
+                announceBoxs[i].style.display="table";
+            }
+        }
+
+    }
+    
+}
 
 function finisheSet(){
     finishedNumBtns.forEach(numBtn=>{numBtn.classList.remove("on")});
     finishedNumBtns[0].classList.add("on");
-    finishedBoxs[0].style.display="flex";
-    finishedBoxs[1].style.display="none";
-    finishedBoxs[2].style.display="none";
+    // finishedBoxs[0].style.display="flex";
+    // finishedBoxs[1].style.display="none";
+    // finishedBoxs[2].style.display="none";
+    pageOn();
 };
 
 finishedNumBtns.forEach(numBtn=>{numBtn.addEventListener("click",finishedOn)});
@@ -34,14 +58,16 @@ finishedNumBtns.forEach(numBtn=>{numBtn.addEventListener("click",finishedOn)});
 function finishedOn(){
     finishedNumBtns.forEach(numBtn=>{numBtn.classList.remove("on")});
     finishedBoxs.forEach(finishedBox=>{finishedBox.style.display="none"});
-
+    
     this.classList.add("on");
+    pageOn();
+    // console.log(Btns,Boxs);
 
-    for( var i = 0 ; i < finishedNumBtns.length; i++ ){
-        if(finishedNumBtns[i].classList.contains("on")){
-            finishedBoxs[i].style.display = "flex";
-        }
-    }//finishedBoxs change효과  
+    // for( var i = 0 ; i < finishedNumBtns.length; i++ ){
+    //     if(finishedNumBtns[i].classList.contains("on")){
+    //         finishedBoxs[i].style.display = "flex";
+    //     }
+    // }//finishedBoxs change효과  
 }
 
 const preBtn = document.querySelector(".pre");
@@ -58,7 +84,8 @@ function prePage(){
             finishedBoxs.forEach(finishedBox=>{finishedBox.style.display="none"});
 
             finishedNumBtns[i-1].classList.add("on");
-            finishedBoxs[i-1].style.display = "flex";
+            // finishedBoxs[i-1].style.display = "flex";
+            pageOn();
 
         }
     }
@@ -71,9 +98,10 @@ function nextPage(){
             finishedNumBtns.forEach(numBtn=>{numBtn.classList.remove("on")});
             finishedBoxs.forEach(finishedBox=>{finishedBox.style.display="none"});
 
-            i+=1
+            i+=1;
             finishedNumBtns[i].classList.add("on");
-            finishedBoxs[i].style.display = "flex";
+            // finishedBoxs[i].style.display = "flex";
+            pageOn();
 
         }
     }
@@ -87,9 +115,11 @@ const announceBtns = document.querySelectorAll(".announce_btn .num");
 function announceSet(){
     announceBtns.forEach(numBtn=>{numBtn.classList.remove("on")});
     announceBtns[0].classList.add("on");
-    announceBoxs[0].style.display="table";
-    announceBoxs[1].style.display="none";
-    announceBoxs[2].style.display="none";
+    // announceBoxs[0].style.display="table";
+    // announceBoxs[1].style.display="none";
+    // announceBoxs[2].style.display="none";
+    pageOn();
+
 };
 announceBtns.forEach(numBtn=>{numBtn.addEventListener("click",announceOn)});
 
@@ -99,11 +129,13 @@ function announceOn(){
 
     this.classList.add("on");
 
-    for( var i = 0 ; i < announceBtns.length; i++ ){
-        if(announceBtns[i].classList.contains("on")){
-            announceBoxs[i].style.display = "table";
-        }
-    }//finishedBoxs change효과  
+    // for( var i = 0 ; i < announceBtns.length; i++ ){
+    //     if(announceBtns[i].classList.contains("on")){
+    //         announceBoxs[i].style.display = "table";
+    //     }
+    // }//finishedBoxs change효과  
+    pageOn();
+
 }
 
 
