@@ -30,35 +30,115 @@ function startEventGame() {
       item.classList.remove("on");
     }
   }
+  progressIndex++;
 }
 // event progress //
 
 // dragEvent //
-const draggables = document.querySelectorAll(".draggable");
-const droppables = document.querySelectorAll(".droppable");
-const dropZon = document.querySelector(".dropZon");
-let draggingObj = null;
+const draggableArea = document.getElementById("draggables");
+const dragCheckAnswer = document.querySelector(".dragEvent button");
+const draggables = Array.from(document.querySelectorAll("#draggable"));
+const droppables = Array.from(document.querySelectorAll("#droppable"));
 
-draggables.forEach((obj) => obj.addEventListener("dragstart", dragStart));
+let currentDroppable = null;
 
-droppables.forEach((obj) => obj.addEventListener("dragover", dragOver));
-droppables.forEach((obj) => obj.addEventListener("dragleave", dragLeave));
-dropZon.addEventListener("drop", handleDrop);
+draggables.forEach(
+  (item) =>
+    (item.onmousedown = function (event) {
+      const target = event.target;
 
-function dragStart(event) {
-  draggingObj = event.target;
-}
-function handleDrop(event) {
-  event.preventDefault();
-  console.log(event);
-}
+      let shiftX = event.clientX - target.getBoundingClientRect().left;
+      let shiftY = event.clientY - target.getBoundingClientRect().top;
 
-function dragOver(event) {
-  event.target.classList.add("over");
-  event.target.addEventListener("drop", handleDrop, true);
-}
-function dragLeave(event) {
-  event.target.classList.remove("over");
-  event.target.removeEventListener("drop", handleDrop, true);
+      target.style.position = "absolute";
+      target.style.zIndex = 1000;
+
+      document.body.append(target);
+      moveAt(event.pageX, event.pageY);
+
+      function moveAt(x, y) {
+        target.style.left = x - shiftX + "px";
+        target.style.top = y - shiftY + "px";
+      }
+      target.addEventListener("mousemove", onMouseMove);
+
+      function onMouseMove(event) {
+        target.style.display = "none";
+        let elemBelow = document.elementFromPoint(event.clientX, event.clientY);
+        target.style.display = "flex";
+
+        moveAt(event.pageX, event.pageY);
+        let droppableBelow = elemBelow.closest(".droppable");
+        if (currentDroppable != droppableBelow) {
+          if (currentDroppable) {
+            currentDroppable.classList.remove("over");
+          }
+          currentDroppable = droppableBelow;
+          if (currentDroppable) {
+            currentDroppable.classList.add("over");
+          }
+        }
+        target.addEventListener("mouseup", onMouseUp);
+      }
+
+      function onMouseUp(event) {
+        target.removeEventListener("mousemove", onMouseMove);
+        target.onmouseup = null;
+
+        target.style.display = "none";
+        let elemBelow = document.elementFromPoint(event.clientX, event.clientY);
+        let droppableBelow = elemBelow.closest(".droppable");
+        target.style.display = "flex";
+
+        if (droppableBelow) {
+          const value = target.innerText;
+          target.style.display = "none";
+          droppableBelow.classList.add("complete");
+          droppableBelow.innerText = value;
+        } else {
+          const targetIndex = Number(target.dataset.dragIndex) - 1;
+          draggableArea.append(target);
+          target.style.top = 0 + "px";
+          switch (targetIndex) {
+            case 0:
+              target.style.left = 0 + "%";
+              break;
+            case 5:
+              target.style.left = 85 + "%";
+              break;
+            default:
+              target.style.left = targetIndex * 15 + targetIndex * 2 + "%";
+          }
+        }
+      }
+    })
+);
+
+dragCheckAnswer.addEventListener("click", checkDragAnswer);
+
+function checkDragAnswer() {
+  for (let item of droppables) {
+    if (item.innerText != "") {
+      if (item.innerText === item.dataset.answer) {
+        continue;
+      } else {
+        alert("아쉽지만 다음 기회에...");
+        return;
+      }
+    } else {
+      alert("정답을 고르세요");
+      return;
+    }
+  }
+  alert("정답입니다.");
+  progressIndex++;
+
+  eventsArray.forEach((article) => {
+    if (eventsArray.indexOf(article) == progressIndex) {
+      article.style.display = "flex";
+    } else {
+      article.style.display = "none";
+    }
+  });
 }
 // dragEvent //
