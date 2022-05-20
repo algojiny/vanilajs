@@ -35,10 +35,10 @@ function startEventGame() {
 // event progress //
 
 // dragEvent //
-const draggableArea = document.getElementById("draggables");
+const draggableArea = document.querySelector("#draggables");
 const dragCheckAnswer = document.querySelector(".dragEvent button");
-const draggables = Array.from(document.querySelectorAll("#draggable"));
-const droppables = Array.from(document.querySelectorAll("#droppable"));
+const draggables = Array.from(document.querySelectorAll(".draggable"));
+const droppables = Array.from(document.querySelectorAll(".droppable"));
 
 let currentDroppable = null;
 
@@ -89,6 +89,8 @@ draggables.forEach(
         let elemBelow = document.elementFromPoint(event.clientX, event.clientY);
         let droppableBelow = elemBelow.closest(".droppable");
         target.style.display = "flex";
+
+        console.log(droppableBelow)
 
         if (droppableBelow) {
           const value = target.innerText;

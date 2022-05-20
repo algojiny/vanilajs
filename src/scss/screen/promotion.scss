@@ -158,7 +158,7 @@
               display: block;
               width: 100%;
               height: 100px;
-              #draggable {
+              .draggable {
                 @include flex_row(center, center);
                 width: 15%;
                 height: 100px;
@@ -197,7 +197,7 @@
               align-items: center;
               width: 100%;
               height: 100px;
-              #droppable {
+              .droppable {
                 @include flex_row(center, center);
                 width: 15%;
                 height: 100px;
@@ -245,7 +245,7 @@
   }
 }
 
-#draggable {
+.draggable {
   @include flex_row(center, center);
   max-width: 180px;
   width: 15%;
