@@ -32,7 +32,7 @@
                 </nav>
                 <div class="myPage">
                     <a class="loginState" href="./views/login.html">
-                        <span>로그인</span>
+                        로그인
                     </a>
                     <a href="./views/home.html"><i class="fa-solid fa-basket-shopping"></i></a>
                     <a href="./views/home.html"><i class="fa-solid fa-magnifying-glass"></i></a>
@@ -84,27 +84,36 @@
                         <div class="dragEvent">
                             <h3 class="event_desc">
                                 <em>문제1</em>
-                                <span>캐토피아 스펠링에 맞게 드래그 해보세요.</span>
+                                <span>미국에서 집고양이와 야생 삵의 교배로 탄생된 고양이 이름은?</span>
                             </h3>
                             <div class="dragArea">
-                                <div class="draggables">
-                                    <div draggable="true" data-drag-index="1" class="draggable">O</div>
-                                    <div draggable="true" data-drag-index="2" class="draggable">C</div>
-                                    <div draggable="true" data-drag-index="3" class="draggable">T</div>
-                                    <div draggable="true" data-drag-index="4" class="draggable">I</div>
-                                    <div draggable="true" data-drag-index="5" class="draggable">A</div>
-                                    <div draggable="true" data-drag-index="6" class="draggable">P</div>
+                                <div id="draggables">
+                                    <div data-drag-index="1" id="draggable">G</div>
+                                    <div data-drag-index="2" id="draggable">E</div>
+                                    <div data-drag-index="3" id="draggable">L</div>
+                                    <div data-drag-index="4" id="draggable">B</div>
+                                    <div data-drag-index="5" id="draggable">A</div>
+                                    <div data-drag-index="6" id="draggable">N</div>
                                 </div>
-                                <div class="droppables dropZon">
-                                    <div dropzone="" data-answer-index="2" class="droppable"></div>
-                                    <div dropzone="" data-answer-index="5" class="droppable"></div>
-                                    <div dropzone="" data-answer-index="3" class="droppable"></div>
-                                    <div dropzone="" data-answer-index="1" class="droppable"></div>
-                                    <div dropzone="" data-answer-index="6" class="droppable"></div>
-                                    <div dropzone="" data-answer-index="5" class="droppable"></div>
+                                <div id="droppables" class="dropZon">
+                                    <div dropzone="1" data-answer="B" id="droppable" class="droppable"></div>
+                                    <div dropzone="2" data-answer="E" id="droppable" class="droppable"></div>
+                                    <div dropzone="3" data-answer="N" id="droppable" class="droppable"></div>
+                                    <div dropzone="4" data-answer="G" id="droppable" class="droppable"></div>
+                                    <div dropzone="5" data-answer="A" id="droppable" class="droppable"></div>
+                                    <div dropzone="6" data-answer="L" id="droppable" class="droppable"></div>
                                 </div>
                             </div>
-                            <button class="checkAnswer">정답확인</button>
+                            <button class="checkAnswer drag">정답확인</button>
+                        </div>
+                        <!--// dragEvent-->
+                        <div class="lineEvent">
+                            <h3 class="event_desc">
+                                <em>문제2</em>
+                                <span>알맞게 선을 이으시오.</span>
+                            </h3>
+
+                            <button class="checkAnswer line">정답확인</button>
                         </div>
                         <!--// dragEvent-->
                     </article>

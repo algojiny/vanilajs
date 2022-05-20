@@ -14,7 +14,6 @@ import "../assets/images/promotion_01.jpeg";
 // images
 
 // 상태관리
-
 export class NewUser {
   constructor(name) {
     this.name = name;

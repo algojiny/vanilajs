@@ -87,8 +87,40 @@
         border-radius: 30px;
         margin: 30px auto;
         div {
+          -ms-user-select: none;
+          -moz-user-select: -moz-none;
+          -khtml-user-select: none;
+          -webkit-user-select: none;
+          user-select: none;
           display: none;
-        }
+          h3.event_desc {
+            font-size: 24px;
+            font-weight: bold;
+            em {
+              background-color: #333;
+              padding: 5px 10px;
+              border-radius: 5px;
+              color: #fff;
+              margin-right: 10px;
+            }
+          }
+          button.checkAnswer {
+            width: 150px;
+            height: 50px;
+            border: none;
+            border-radius: 5px;
+            background-color: #333;
+            color: #fff;
+            font-size: 24px;
+            font-weight: bold;
+            box-shadow: 0px 10px 10px 0px rgba($color: #333, $alpha: 0.2);
+            cursor: pointer;
+            &:hover {
+              transform: scale(103%);
+              color: tomato;
+            }
+          }
+        } // eventBox common
         .startEvent {
           justify-content: center;
           align-items: center;
@@ -116,81 +148,84 @@
           height: 100%;
           width: 100%;
           padding: 30px 10px;
-          h3.event_desc {
-            font-size: 24px;
-            font-weight: bold;
-            em {
-              background-color: #333;
-              padding: 5px 10px;
-              border-radius: 5px;
-              color: #fff;
-              margin-right: 10px;
-            }
-          }
           .dragArea {
             @include flex_column(space-between, center);
             width: 100%;
-            height: 250px;
+            height: 300px;
             padding: 0px 30px;
-            .draggables {
-              display: grid;
-              grid-template-columns: repeat(6, 1fr);
+            #draggables {
+              position: relative;
+              display: block;
               width: 100%;
               height: 100px;
-              gap: 15px;
-              .draggable {
+              #draggable {
                 @include flex_row(center, center);
-                width: 100%;
-                height: 100%;
+                width: 15%;
+                height: 100px;
                 background-color: slateblue;
-                box-shadow: 0px 10px 10px 0px rgba($color: #333, $alpha: 0.3);
                 color: #fff;
                 font-size: 28px;
                 font-weight: bold;
                 border-radius: 10px;
                 overflow: hidden;
                 cursor: pointer;
+                position: absolute;
+                top: 0px;
+                &[data-drag-index="1"] {
+                  left: 0%;
+                }
+                &[data-drag-index="2"] {
+                  left: 17%;
+                }
+                &[data-drag-index="3"] {
+                  left: 34%;
+                }
+                &[data-drag-index="4"] {
+                  left: 51%;
+                }
+                &[data-drag-index="5"] {
+                  left: 68%;
+                }
+                &[data-drag-index="6"] {
+                  left: 85%;
+                }
               }
             }
-            .droppables {
-              display: grid;
-              grid-template-columns: repeat(6, 1fr);
+            #droppables {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
               width: 100%;
               height: 100px;
-              gap: 15px;
-              .droppable {
+              #droppable {
                 @include flex_row(center, center);
-                width: 100%;
-                height: 100%;
+                width: 15%;
+                height: 100px;
                 border: 3px solid slateblue;
                 border-radius: 10px;
-                transition: all 0.2s ease-in-out;
                 &.over {
                   border: 3px dashed slateblue;
                 }
-                &.on {
+                &.complete {
                   background-color: slateblue;
+                  border: 3px solid gold;
+                  color: #fff;
+                  font-size: 28px;
+                  font-weight: bold;
+                  pointer-events: none;
                 }
               }
             }
           } // dragArea
-          button.checkAnswer {
-            width: 150px;
-            height: 50px;
-            border: none;
-            border-radius: 5px;
-            background-color: #333;
-            color: #fff;
-            font-size: 24px;
-            font-weight: bold;
-            box-shadow: 0px 10px 10px 0px rgba($color: #333, $alpha: 0.2);
-            cursor: pointer;
-            &:hover {
-              transform: scale(103%);
-              color: tomato;
-            }
-          }
         } // dragEvent
+        .lineEvent {
+          flex-direction: column;
+          align-items: center;
+          justify-content: space-between;
+          height: 100%;
+          width: 100%;
+          padding: 30px 10px;
+        }
         .on {
           display: flex;
         }
@@ -208,4 +243,24 @@
     opacity: 1;
     transform: translateY(0px);
   }
+}
+
+#draggable {
+  @include flex_row(center, center);
+  max-width: 130px;
+  width: 100%;
+  height: 100px;
+  background-color: slateblue;
+  box-shadow: 0px 10px 10px 0px rgba($color: #333, $alpha: 0.3);
+  color: #fff;
+  font-size: 28px;
+  font-weight: bold;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  -ms-user-select: none;
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
 }
