@@ -1,4 +1,6 @@
 
 # /public
-node_modules/
-public/
+/.vscode
+/node_modules
+/public
+.gitignore
