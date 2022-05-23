@@ -231,6 +231,14 @@
         }
       } // eventBox
     } // dragEvent
+    .lineEvent {
+      canvas {
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        border: 1px solid #333;
+      } // canvas
+    } // lineEvent
   } // main
 } // wrap
 

@@ -46,7 +46,6 @@ draggables.forEach(
   (item) =>
     (item.onmousedown = function (event) {
       const target = event.target;
-
       let shiftX = event.clientX - target.getBoundingClientRect().left;
       let shiftY = event.clientY - target.getBoundingClientRect().top;
 
@@ -90,7 +89,7 @@ draggables.forEach(
         let droppableBelow = elemBelow.closest(".droppable");
         target.style.display = "flex";
 
-        console.log(droppableBelow)
+        console.log(droppableBelow);
 
         if (droppableBelow) {
           const value = target.innerText;
@@ -133,6 +132,7 @@ function checkDragAnswer() {
     }
   }
   alert("정답입니다.");
+
   progressIndex++;
 
   eventsArray.forEach((article) => {
@@ -144,3 +144,49 @@ function checkDragAnswer() {
   });
 }
 // dragEvent //
+
+// canvas //
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
+
+ctx.beginPath();
+ctx.arc(700, 400, 20, 0, 2 * Math.PI);
+ctx.stroke();
+ctx.fillStyle = "red";
+ctx.fill();
+
+ctx.beginPath();
+ctx.arc(700, 700, 20, 0, 2 * Math.PI);
+ctx.stroke();
+ctx.fillStyle = "red";
+ctx.fill();
+
+ctx.beginPath();
+ctx.arc(700, 1000, 20, 0, 2 * Math.PI);
+ctx.stroke();
+ctx.fillStyle = "red";
+ctx.fill();
+
+ctx.beginPath();
+ctx.arc(2300, 400, 20, 0, 2 * Math.PI);
+ctx.stroke();
+ctx.fillStyle = "gray";
+ctx.fill();
+
+ctx.beginPath();
+ctx.arc(2300, 700, 20, 0, 2 * Math.PI);
+ctx.stroke();
+ctx.fillStyle = "gray";
+ctx.fill();
+
+ctx.beginPath();
+ctx.arc(2300, 1000, 20, 0, 2 * Math.PI);
+ctx.stroke();
+ctx.fillStyle = "gray";
+ctx.fill();
+
+canvas.addEventListener("mousedown", lineStart);
+function lineStart(event) {
+  console.log(event.pageX);
+}
+// canvas //
