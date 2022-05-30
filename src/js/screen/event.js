@@ -88,43 +88,79 @@ function finishedOn() {
 
 }
 
-const preBtn = document.querySelector(".pre");
-const nextBtn = document.querySelector(".next");
+const preBtns = document.querySelectorAll(".pre");
+const nextBtns = document.querySelectorAll(".next");
 
-preBtn.addEventListener("click", prePage);
-nextBtn.addEventListener("click", nextPage);
+
+preBtns.forEach((btn)=>{btn.addEventListener("click", prePage)});
+nextBtns.forEach((btn)=>{btn.addEventListener("click", nextPage)});
 
 function prePage() {
-  for (var i = 1; i < finishedBoxs.length; i++) {
-    if (finishedNumBtns[i].classList.contains("on")) {
-      finishedNumBtns.forEach((numBtn) => {
-        numBtn.classList.remove("on");
-      });
-      finishedBoxs.forEach((finishedBox) => {
-        finishedBox.style.display = "none";
-      });
+  if(eMenus[1].classList.contains("on")){
+    for (var i = 1; i < finishedBoxs.length; i++) {
+      if (finishedNumBtns[i].classList.contains("on")) {
+        finishedNumBtns.forEach((numBtn) => {
+          numBtn.classList.remove("on");
+        });
+        finishedBoxs.forEach((finishedBox) => {
+          finishedBox.style.display = "none";
+        });
 
-      finishedNumBtns[i - 1].classList.add("on");
-      // finishedBoxs[i-1].style.display = "flex";
-      pageOn();
+        finishedNumBtns[i - 1].classList.add("on");
+        // finishedBoxs[i-1].style.display = "flex";
+        pageOn();
+      }
+    }
+  }if(eMenus[2].classList.contains("on")){
+    for (var i = 1; i < announceBoxs.length; i++) {
+      if (announceBtns[i].classList.contains("on")) {
+        announceBtns.forEach((Btn) => {
+          Btn.classList.remove("on");
+        });
+        announceBoxs.forEach((announceBox) => {
+          announceBox.style.display = "none";
+        });
+
+        announceBtns[i - 1].classList.add("on");
+        // announceBoxs[i-1].style.display = "flex";
+        pageOn();
+      }
     }
   }
 }
 
 function nextPage() {
-  for (var i = 0; i < finishedBoxs.length - 1; i++) {
-    if (finishedNumBtns[i].classList.contains("on")) {
-      finishedNumBtns.forEach((numBtn) => {
-        numBtn.classList.remove("on");
-      });
-      finishedBoxs.forEach((finishedBox) => {
-        finishedBox.style.display = "none";
-      });
+  if(eMenus[1].classList.contains("on")){
+    for (var i = 0; i < finishedBoxs.length - 1; i++) {
+      if (finishedNumBtns[i].classList.contains("on")) {
+        finishedNumBtns.forEach((numBtn) => {
+          numBtn.classList.remove("on");
+        });
+        finishedBoxs.forEach((finishedBox) => {
+          finishedBox.style.display = "none";
+        });
 
-      i += 1;
-      finishedNumBtns[i].classList.add("on");
-      // finishedBoxs[i].style.display = "flex";
-      pageOn();
+        i += 1;
+        finishedNumBtns[i].classList.add("on");
+        // finishedBoxs[i].style.display = "flex";
+        pageOn();
+      }
+    }
+  }if(eMenus[2].classList.contains("on")){
+    for (var i = 0; i < announceBoxs.length - 1; i++) {
+      if (announceBtns[i].classList.contains("on")) {
+        announceBtns.forEach((Btn) => {
+          Btn.classList.remove("on");
+        });
+        announceBoxs.forEach((announceBox) => {
+          announceBox.style.display = "none";
+        });
+
+        i += 1;
+        announceBtns[i].classList.add("on");
+        // announceBoxs[i].style.display = "flex";
+        pageOn();
+      }
     }
   }
 }
@@ -165,4 +201,52 @@ function announceOn() {
   pageOn();
 }
 
-console.log(announceBtns);
+// console.log(announceBtns);
+//당첨자 발표 데이타
+// const winners = [
+//   {
+//     id : 1,
+//     title : '1월의 이벤트 당첨자',
+//     date : '2021-01-30',
+//     hits : 85
+//   },
+//   {
+//     id : 2,
+//     title : '2월의 이벤트 당첨자',
+//     date : '2021-02-20',
+//     hits : 85
+//   },
+//   {
+//     id : 3,
+//     title : '3월의 이벤트 당첨자',
+//     date : '2021-03-30',
+//     hits : 85
+//   },
+//   {
+//     id : 4,
+//     title : '4월의 이벤트 당첨자',
+//     date : '2021-04-30',
+//     hits : 85
+//   },
+//   {
+//     id : 5,
+//     title : '5월의 이벤트 당첨자',
+//     date : '2021-05-30',
+//     hits : 85
+//   }
+// ]
+// console.log(winners);
+
+// const list = document.getElementById(list);
+
+// function showList(val){
+//   list.innerHTML='';
+//   const res = winners.forEach(winner=>{
+//     if(winner.title.includes(val)){
+//       const tr = document.createElement("tr");
+//       tr.innerHTML= '<td> ${winner.id} </td> <td> ${winner.title} </td><td> ${winner.date} </td> <td> ${winner.hits} </td>';
+//       list.appendChild(tr);
+//     }
+//   })
+// }
+// showList('');
